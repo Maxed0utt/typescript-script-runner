@@ -1,0 +1,24 @@
+{
+  "exclude": ["cypress"],
+  "compilerOptions": {
+    "outDir": "./dist", // Not used because compiling is done via Webpack. Just here to prevent TS errors.
+    "paths": {
+      "~/*": ["./src/*"],
+      "b/*": ["./nodeapp/*"],
+      "s/*": ["./shared/*"]
+    },
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "module": "CommonJS",
+    "target": "ES2021",
+    "lib": ["DOM", "ES2021"]
+  }
+}
+// Compatibility info:
+// https://node.green/
+// https://kangax.github.io/compat-table/es6/
+// https://en.wikipedia.org/wiki/ECMAScript_version_history
